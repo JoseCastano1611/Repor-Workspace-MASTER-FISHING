@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro - MASTER FISHING</title>
+
+    <%- include('Partials/head') %>
+
+</head>
+
+<body>
+
+    <%- include('Partials/navbar') %>
+
+
+    <!-- ==========================================
+         REGISTRO DE USUARIO
+         ========================================== -->
+
+    <main class="container py-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-lg-9">
+
+                <div class="card shadow-lg border-0">
+
+                    <!-- ENCABEZADO -->
+
+                    <div class="card-header text-center py-4">
+
+                        <h1 class="fw-bold mb-1">
+                            CREAR CUENTA
+                        </h1>
+
+                        <p class="mb-0">
+                            Únete a MASTER FISHING
+                        </p>
+
+                    </div>
+
+
+                    <div class="card-body p-4 p-md-5">
+
+                        <form action="/registro" method="POST">
+
+                            <div class="row g-3">
+
+                                <!-- NOMBRE -->
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="nombre"
+                                        class="form-label fw-bold"
+                                    >
+                                        Nombre completo
+                                    </label>
+
+                                    <div class="input-group">
+
+                                        <span class="input-group-text">
+                                            <i class="bi bi-person"></i>
+                                        </span>
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="nombre"
+                                            name="nombre"
+                                            placeholder="Tu nombre completo"
+                                            required
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- CÉDULA -->
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="cedula"
+                                        class="form-label fw-bold"
+                                    >
+                                        Cédula
+                                    </label>
+
+                                    <div class="input-group">
+
+                                        <span class="input-group-text">
+                                            <i class="bi bi-card-text"></i>
+                                        </span>
+
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            id="cedula"
+                                            name="cedula"
+                                            placeholder="Número de documento"
+                                            required
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- FECHA DE NACIMIENTO -->
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="fechaNacimiento"
+                                        class="form-label fw-bold"
+                                    >
+                                        Fecha de nacimiento
+                                    </label>
+
+                                    <div class="input-group">
+
+                                        <span class="input-group-text">
+                                            <i class="bi bi-calendar"></i>
+                                        </span>
+
+                                        <input
+                                            type="date"
+                                            class="form-control"
+                                            id="fechaNacimiento"
+                                            name="fechaNacimiento"
+                                            required
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- CORREO -->
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="correo"
+                                        class="form-label fw-bold"
+                                    >
+                                        Correo electrónico
+                                    </label>
+
+                                    <div class="input-group">
+
+                                        <span class="input-group-text">
+                                            <i class="bi bi-envelope"></i>
+                                        </span>
+
+                                        <input
+                                            type="email"
+                                            class="form-control"
+                                            id="correo"
+                                            name="correo"
+                                            placeholder="correo@ejemplo.com"
+                                            required
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- CONTRASEÑA -->
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="password"
+                                        class="form-label fw-bold"
+                                    >
+                                        Contraseña
+                                    </label>
+
+                                    <div class="input-group">
+
+                                        <span class="input-group-text">
+                                            <i class="bi bi-lock"></i>
+                                        </span>
+
+                                        <input
+                                            type="password"
+                                            class="form-control"
+                                            id="password"
+                                            name="password"
+                                            placeholder="Crea una contraseña"
+                                            minlength="6"
+                                            required
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- CONFIRMAR CONTRASEÑA -->
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="confirmarPassword"
+                                        class="form-label fw-bold"
+                                    >
+                                        Confirmar contraseña
+                                    </label>
+
+                                    <div class="input-group">
+
+                                        <span class="input-group-text">
+                                            <i class="bi bi-shield-lock"></i>
+                                        </span>
+
+                                        <input
+                                            type="password"
+                                            class="form-control"
+                                            id="confirmarPassword"
+                                            name="confirmarPassword"
+                                            placeholder="Repite la contraseña"
+                                            minlength="6"
+                                            required
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- TÉRMINOS -->
+
+                                <div class="col-12 mt-4">
+
+                                    <div class="form-check">
+
+                                        <input
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            id="terminos"
+                                            name="terminos"
+                                            required
+                                        >
+
+                                        <label
+                                            class="form-check-label"
+                                            for="terminos"
+                                        >
+                                            Acepto los términos y condiciones
+                                            de MASTER FISHING.
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- BOTÓN -->
+
+                                <div class="col-12 text-center mt-4">
+
+                                    <button
+                                        type="submit"
+                                        class="btn btn-success btn-lg px-5"
+                                    >
+                                        <i class="bi bi-person-plus"></i>
+                                        Crear cuenta
+                                    </button>
+
+                                </div>
+
+
+                                <!-- LOGIN -->
+
+                                <div class="col-12 text-center mt-3">
+
+                                    <p class="mb-0">
+
+                                        ¿Ya tienes una cuenta?
+
+                                        <a href="/login">
+                                            Inicia sesión
+                                        </a>
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <%- include('Partials/footer') %>
+
+</body>
+
+</html>

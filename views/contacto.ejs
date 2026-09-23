@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto - MASTER FISHING</title>
+
+    <%- include('Partials/head') %>
+
+</head>
+
+<body>
+
+    <%- include('Partials/Navegation') %>
+
+    <!-- ==========================================
+         FORMULARIO DE CONTACTO
+         ========================================== -->
+
+    <main class="container py-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-lg-10">
+
+                <div class="card shadow-lg border-0">
+
+                    <div class="card-body p-4 p-md-5">
+
+                        <!-- TÍTULO -->
+
+                        <div class="text-center mb-5">
+
+                            <h1 class="fw-bold">
+                                CONTÁCTANOS
+                            </h1>
+
+                            <p class="text-muted">
+                                ¿Tienes alguna pregunta sobre nuestros productos?
+                                Escríbenos y estaremos encantados de ayudarte.
+                            </p>
+
+                        </div>
+
+
+                        <div class="row g-4">
+
+                            <!-- ==================================
+                                 INFORMACIÓN DE CONTACTO
+                                 ================================== -->
+
+                            <div class="col-md-5">
+
+                                <div class="h-100 p-4 rounded">
+
+                                    <h3 class="fw-bold mb-4">
+                                        MASTER FISHING
+                                    </h3>
+
+                                    <p>
+                                        Somos una tienda especializada en
+                                        artículos para pesca deportiva.
+                                    </p>
+
+                                    <hr>
+
+                                    <p>
+                                        <strong>Teléfono</strong><br>
+                                        +57 300 000 0000
+                                    </p>
+
+                                    <p>
+                                        <strong>Correo</strong><br>
+                                        contacto@masterfishing.com
+                                    </p>
+
+                                    <p>
+                                        <strong>Ubicación</strong><br>
+                                        Colombia
+                                    </p>
+
+                                    <p>
+                                        <strong>Horario</strong><br>
+                                        Lunes a sábado<br>
+                                        8:00 AM - 6:00 PM
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- ==================================
+                                 FORMULARIO
+                                 ================================== -->
+
+                            <div class="col-md-7">
+
+                                <form action="/contacto" method="POST">
+
+                                    <!-- NOMBRE -->
+
+                                    <div class="input-group mb-3">
+
+                                        <span class="input-group-text">
+                                            Nombre
+                                        </span>
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="nombre"
+                                            placeholder="Escribe tu nombre"
+                                            required
+                                        >
+
+                                    </div>
+
+
+                                    <!-- CORREO -->
+
+                                    <div class="input-group mb-3">
+
+                                        <span class="input-group-text">
+                                            Correo
+                                        </span>
+
+                                        <input
+                                            type="email"
+                                            class="form-control"
+                                            name="correo"
+                                            placeholder="correo@ejemplo.com"
+                                            required
+                                        >
+
+                                    </div>
+
+
+                                    <!-- TELÉFONO -->
+
+                                    <div class="input-group mb-3">
+
+                                        <span class="input-group-text">
+                                            Teléfono
+                                        </span>
+
+                                        <input
+                                            type="tel"
+                                            class="form-control"
+                                            name="telefono"
+                                            placeholder="300 000 0000"
+                                        >
+
+                                    </div>
+
+
+                                    <!-- ASUNTO -->
+
+                                    <div class="input-group mb-3">
+
+                                        <span class="input-group-text">
+                                            Asunto
+                                        </span>
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="asunto"
+                                            placeholder="Motivo de contacto"
+                                            required
+                                        >
+
+                                    </div>
+
+
+                                    <!-- MENSAJE -->
+
+                                    <div class="mb-3">
+
+                                        <label
+                                            for="mensaje"
+                                            class="form-label fw-bold"
+                                        >
+                                            Mensaje
+                                        </label>
+
+                                        <textarea
+                                            class="form-control"
+                                            id="mensaje"
+                                            name="mensaje"
+                                            rows="6"
+                                            placeholder="Escribe tu mensaje..."
+                                            required
+                                        ></textarea>
+
+                                    </div>
+
+
+                                    <!-- BOTONES -->
+
+                                    <div class="d-flex gap-2">
+
+                                        <button
+                                            type="submit"
+                                            class="btn btn-primary"
+                                        >
+                                            Enviar mensaje
+                                        </button>
+
+                                        <button
+                                            type="reset"
+                                            class="btn btn-outline-secondary"
+                                        >
+                                            Limpiar
+                                        </button>
+
+                                    </div>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <%- include('Partials/footer') %>
+
+</body>
+
+</html>

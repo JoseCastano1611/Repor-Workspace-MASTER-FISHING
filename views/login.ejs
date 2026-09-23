@@ -1,0 +1,184 @@
+<%- include('Partials/head') %>
+
+<%- include('Partials/navbar') %>
+
+
+<div class="container py-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6 col-lg-5">
+
+            <div class="card shadow-lg border-0">
+
+                <div class="card-body p-4 p-md-5">
+
+                    <!-- ENCABEZADO -->
+
+                    <div class="text-center mb-4">
+
+                        <div class="mb-3">
+
+                            <i class="bi bi-person-circle display-3 text-warning"></i>
+
+                        </div>
+
+                        <h2 class="fw-bold">
+                            INICIAR SESIÓN
+                        </h2>
+
+                        <p class="text-muted">
+                            Ingresa a tu cuenta de MASTER FISHING
+                        </p>
+
+                    </div>
+
+
+                    <!-- MENSAJE DEL SERVIDOR -->
+
+                    <% if (mensaje) { %>
+
+                        <div
+                            class="alert alert-<%= tipoMensaje %> alert-dismissible fade show"
+                            role="alert"
+                        >
+
+                            <i class="bi bi-exclamation-triangle-fill"></i>
+
+                            <%= mensaje %>
+
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="alert"
+                            ></button>
+
+                        </div>
+
+                    <% } %>
+
+
+                    <!-- FORMULARIO DE LOGIN -->
+
+                    <form action="/login" method="POST">
+
+                        <!-- CORREO -->
+
+                        <div class="form-floating mb-3">
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="correo"
+                                name="correo"
+                                placeholder="Correo electrónico"
+                                required
+                            >
+
+                            <label for="correo">
+
+                                <i class="bi bi-envelope"></i>
+
+                                Correo electrónico
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- CONTRASEÑA -->
+
+                        <div class="form-floating mb-3">
+
+                            <input
+                                type="password"
+                                class="form-control"
+                                id="password"
+                                name="password"
+                                placeholder="Contraseña"
+                                required
+                            >
+
+                            <label for="password">
+
+                                <i class="bi bi-lock"></i>
+
+                                Contraseña
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- RECORDAR USUARIO -->
+
+                        <div class="form-check mb-4">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="recordar"
+                            >
+
+                            <label
+                                class="form-check-label"
+                                for="recordar"
+                            >
+                                Recordarme
+                            </label>
+
+                        </div>
+
+
+                        <!-- BOTÓN INGRESAR -->
+
+                        <div class="d-grid">
+
+                            <button
+                                type="submit"
+                                class="btn btn-warning btn-lg fw-bold"
+                            >
+
+                                <i class="bi bi-box-arrow-in-right"></i>
+
+                                INGRESAR
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+
+                    <!-- ENLACE AL REGISTRO -->
+
+                    <div class="text-center mt-4">
+
+                        <p class="mb-0">
+
+                            ¿Todavía no tienes una cuenta?
+
+                            <a
+                                href="/registro"
+                                class="fw-bold text-decoration-none"
+                            >
+                                Regístrate aquí
+                            </a>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<%- include('Partials/footer') %>
+```
